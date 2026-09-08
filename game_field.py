@@ -1,6 +1,6 @@
 import consts
-
 import random
+
 def board():
     grid_game = []
     for row in range(consts.BOARD_ROWS):
@@ -8,9 +8,7 @@ def board():
         for col in range(consts.BOARD_COLS):
             grid_game[row].append(consts.CELL_STATE[0])
 
-            grid_game.append(consts.CELL_STATE[0])
     return grid_game
-print(board())
 
 def get_flag_pos():
     flag_pos = []
@@ -20,13 +18,24 @@ def get_flag_pos():
             grid[consts.flag_row + row][consts.flag_col + col] = consts.CELL_STATE[2]
     return flag_pos
 
-def get_boom_list_pos():
-    boom_list = []
-def random_grass_place_x_y():
-    grass_list = []
+def add_boom_grid():
+    boom_lst = []
     for i in range(20):
-        grass_list = [(random.randint(0,consts.WINDOW_WIDTH-40),random.randint(0,consts.WINDOW_HEIGHT-40))]
-    return grass_list
+        row = random.randint(0, consts.BOARD_ROWS - 2)
+        col =  random.randint(0, consts.BOARD_COLS)
+        boom_lst.append((row, col))
+
+        grid[row][col] = consts.CELL_STATE[1]
+        grid[row][col + 1] = consts.CELL_STATE[1]
+        grid[row][col + 2] = consts.CELL_STATE[1]
+
+
+
+def random_x_y():
+    lst = []
+    for i in range(20):
+        lst = [(random.randint(0,consts.WINDOW_WIDTH-40),random.randint(0,consts.WINDOW_HEIGHT-40))]
+    return lst
 
 def print_lst(lst):
     for row in lst:
@@ -36,4 +45,5 @@ def print_lst(lst):
 
 grid = board()
 get_flag_pos()
+add_boom_grid()
 print_lst(grid)

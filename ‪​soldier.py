@@ -24,7 +24,7 @@ def is_touching_boom(boom_pos):
 def is_touching_flag():
     flag_pos = game_field.get_flag_pos()
     for body in range(len(soldier_legs)):
-        if soldier_legs[body] in flag_pos:
+        if soldier_body[body] in flag_pos:
             return True
     return False
 
@@ -34,6 +34,30 @@ def is_inside_border():
             if soldier_full_body[body][1] < 0 or soldier_full_body[body][1] > consts.BOARD_COLS:
                 return False
     return True
+
+def move_up(soldier_body_change, soldier_legs_change):
+    if is_inside_border():
+        soldier["left_up_y"] += 1
+        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
+        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+
+def move_down(soldier_body_change, soldier_legs_change):
+    if is_inside_border():
+        soldier["left_up_y"] -= 1
+        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
+        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+
+def move_left(soldier_body_change, soldier_legs_change):
+    if is_inside_border():
+        soldier["left_up_x"] -= 1
+        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
+        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+
+def move_right(soldier_body_change, soldier_legs_change):
+    if is_inside_border():
+        soldier["left_up_x"] += 1
+        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
+        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
 
 
 soldier = init_soldier()
