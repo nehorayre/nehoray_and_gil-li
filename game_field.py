@@ -8,8 +8,13 @@ def board():
     return grid_game
 print(board())
 
-def random_grass_place_x_y():
-    grass_list = []
+gras_list = []
+def random_x_y():
     for i in range(20):
-        grass_list = [(random.randint(0,consts.WINDOW_WIDTH-40),random.randint(0,consts.WINDOW_HEIGHT-40))]
-    return grass_list
+        x = random.randint(0, consts.WINDOW_WIDTH - 40)
+        y = random.randint(0, consts.WINDOW_HEIGHT - 40)
+        while ( x<= consts.CELL_SIZE*consts.SOLDIER_COLS and y <= consts.CELL_SIZE*consts.SOLDIER_ROWS) or (( x<= consts.CELL_SIZE*consts.FLAG_COLS- 40 and y <= consts.CELL_SIZE*consts.FLAG_ROWS)) :
+            x = random.randint(0, consts.WINDOW_WIDTH - 40)
+            y = random.randint(0, consts.WINDOW_HEIGHT - 40)
+        gras_list.append((x,y))
+    return gras_list
