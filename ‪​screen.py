@@ -34,7 +34,7 @@ def create_grass():
 
 def draw_random_grass():
     for i in range(20):
-        temp_grass = game_field.random_x_y()[i]
+        temp_grass = game_field.random_x_y_for_gras()[i]
         screen.blit(create_grass(), temp_grass)
 
 # ----------------------------
