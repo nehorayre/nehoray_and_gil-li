@@ -18,6 +18,13 @@ def create_soldier(x,y):
     screen.blit(soldier_img, (x, y))
     return soldier_img
 
+def create_soldier_night(x,y):
+    soldier_img = pygame.image.load("img/soldier.png")
+    soldier_img = pygame.transform.scale(soldier_img,
+                    (consts.SOLDIER_ROWS * consts.CELL_SIZE,
+                     consts.SOLDIER_ROWS * consts.CELL_SIZE))
+    screen.blit(soldier_img, (x, y))
+    return soldier_img
 
  # ----------grass-------------
 def create_grass():
@@ -72,7 +79,8 @@ def draw_message(message, font_size, color, location):
 
 # -------------draw---------------
 
-def draw_grid():
+def draw_grid(x,y):
+    create_soldier_night(x,y)
     blockSize = 20 #Set the size of the grid block
     for x in range(0, consts.WINDOW_WIDTH, blockSize):
         for y in range(0, consts.WINDOW_HEIGHT, blockSize):
