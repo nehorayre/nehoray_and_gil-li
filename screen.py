@@ -92,6 +92,6 @@ def draw_grid(x,y):
 def create_display():
     create_soldier(0, 0)
     draw_random_grass()
-    # draw_boom_by_x_y()
+    draw_boom_by_x_y()
     create_flag()
     pygame.display.update()
