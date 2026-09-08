@@ -29,7 +29,7 @@ def create_soldier_night(x,y):
  # ----------grass-------------
 def create_grass():
     grass_img = pygame.image.load("img/grass.png")
-    grass_img = pygame.transform.scale(grass_img, (consts.grass_size, consts.grass_size))
+    grass_img = pygame.transform.scale(grass_img, (consts.GRASS_SIZE, consts.GRASS_SIZE))
     return grass_img
 
 def draw_random_grass():
@@ -49,8 +49,9 @@ def create_boom():
 
 def draw_boom_by_x_y():
     count = 0
+    boom_lst = game_field.add_boom_grid()
     for i in range(20):
-        temp_boom = game_field.boom_list()[i]
+        temp_boom = boom_lst[i]
         screen.blit(create_boom(), temp_boom)
 
 # ----------------------------
@@ -88,11 +89,9 @@ def draw_grid(x,y):
             pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
 
 
-
-
-def create_display(x,y):
-    create_soldier(x, y)
+def create_display():
+    create_soldier(0, 0)
     draw_random_grass()
-    draw_boom_by_x_y()
+    # draw_boom_by_x_y()
     create_flag()
     pygame.display.update()

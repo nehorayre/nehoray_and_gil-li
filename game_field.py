@@ -22,14 +22,15 @@ def get_flag_pos():
 def add_boom_grid():
     boom_lst = []
     for i in range(20):
-        row = random.randint(0, consts.BOARD_ROWS - 2)
-        col =  random.randint(0, consts.BOARD_COLS)
+        row = random.randint(0, consts.BOARD_ROWS)
+        col =  random.randint(0, consts.BOARD_COLS - 2)
         boom_lst.append((row, col))
 
         grid[row][col] = consts.CELL_STATE[1]
         grid[row][col + 1] = consts.CELL_STATE[1]
         grid[row][col + 2] = consts.CELL_STATE[1]
 
+    return boom_lst
 
 def random_x_y():
     lst = []
@@ -50,4 +51,4 @@ def random_x_y_for_gras():
 
 grid = board()
 get_flag_pos()
-add_boom_grid()
+# add_boom_grid()
