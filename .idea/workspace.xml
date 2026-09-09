@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="add UI" />
+    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="somthing fuckt up">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/nehoray_and_gil-li.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/explotion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/flag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/guard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/injury.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/mine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/snake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/soldier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/soldier_night.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/teleport.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consts.py" beforeDir="false" afterPath="$PROJECT_DIR$/consts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/‪​screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +39,15 @@
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="devNehoray" />
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_COMMIT" />
+      </set>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -50,25 +77,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.game_field (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.screen (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.‪​game_field.executor&quot;: &quot;Run&quot;,
-    &quot;Python.‪​screen.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jbt/PycharmProjects/nehoray_gil-li/nehoray_and_gil-li&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.game_field (1).executor": "Run",
+    "Python.game_field.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.screen (1).executor": "Run",
+    "Python.‪​game_field.executor": "Run",
+    "Python.‪​screen.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "develop",
+    "git.auto.fetch.suggestion.counter": "1",
+    "last_opened_file_path": "C:/Users/jbt/PycharmProjects/nehoray_gil-li/nehoray_and_gil-li",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python.game_field">
+}]]></component>
+  <component name="RunManager" selected="Python.main">
     <configuration name="game_field (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nehoray_and_gil-li" />
       <option name="ENV_FILES" value="" />
@@ -109,6 +140,30 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="C:\Users\jbt\PycharmProjects\nehoray_gil-li\nehoray_and_gil-li\game_field.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nehoray_and_gil-li" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,6 +246,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.game_field" />
         <item itemvalue="Python.screen (1)" />
         <item itemvalue="Python.game_field (1)" />
@@ -308,7 +364,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1788872312054</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL‎-00013" summary="somthing fuckt up">
+      <option name="closed" value="true" />
+      <created>1788934684503</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL‎-00013" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1788934684503</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +385,7 @@
     <MESSAGE value="add scren view" />
     <MESSAGE value="create EMPTY board" />
     <MESSAGE value="add UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UI" />
+    <MESSAGE value="somthing fuckt up" />
+    <option name="LAST_COMMIT_MESSAGE" value="somthing fuckt up" />
   </component>
 </project>
