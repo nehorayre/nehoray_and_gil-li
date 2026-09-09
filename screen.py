@@ -52,9 +52,7 @@ def draw_mine_by_x_y():
     for i in range(consts.MINES_COUNT):
         temp_mine = mine_lst[i]
         refactor_mine = (temp_mine[1] * consts.CELL_SIZE, temp_mine[0] * consts.CELL_SIZE)
-        print(refactor_mine)
         screen.blit(create_mine(), refactor_mine)
-    print("----------------")
 
 # ----------------------------
 def create_flag():
