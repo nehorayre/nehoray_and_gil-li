@@ -88,6 +88,7 @@ def draw_grid(x,y):
         for j in range(0, consts.WINDOW_HEIGHT, blockSize):
             rect = pygame.Rect(i, j, blockSize, blockSize)
             pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
+    screen.fill(consts.BACKGROUND_COLOR)
     create_flag()
     draw_mine_by_x_y()
     create_soldier("img/soldier_night.png",x, y)

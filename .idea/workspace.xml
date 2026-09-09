@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="add capion and title text">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen.py" afterDir="false" />
-    </list>
+    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="fix soldier" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +49,9 @@
     &quot;accountId&quot;: &quot;0e6812ac-2664-4dc1-ba57-da4f620e43ba&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/00a0130c-ee4f-4da7-be18-3104e712a5d2_bubbles_nehoray_revah.zip.5d2/bubbles/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -66,7 +66,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.game_field (1).executor": "Run",
     "Python.game_field.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.screen (1).executor": "Run",
     "Python.‪​game_field.executor": "Run",
     "Python.‪​screen.executor": "Run",
@@ -388,7 +388,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1788938151934</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL‎-00018" summary="fix soldier">
+      <option name="closed" value="true" />
+      <created>1788939176784</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL‎-00018" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1788939176784</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +413,7 @@
     <MESSAGE value="fix draw grid" />
     <MESSAGE value="change name to draw xray" />
     <MESSAGE value="add capion and title text" />
-    <option name="LAST_COMMIT_MESSAGE" value="add capion and title text" />
+    <MESSAGE value="fix soldier" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix soldier" />
   </component>
 </project>
