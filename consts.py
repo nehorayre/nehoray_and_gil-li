@@ -36,9 +36,14 @@ RIGHT = 2
 DOWN = 3
 LEFT = 4
 
+
 MINES_COUNT = 20
-MINE_ROWS = 1
-MINE_COLS = 3
+MINE_ROWS = 3
+MINE_COLS = 1
+
+CELL_STATE = ["EMPTY", "MINE", "FLAG"]
+
+GRASS_SIZE = 40
 
 grass_size = 40
 

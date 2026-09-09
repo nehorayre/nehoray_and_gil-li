@@ -29,29 +29,30 @@ def create_soldier_night(x,y):
  # ----------grass-------------
 def create_grass():
     grass_img = pygame.image.load("img/grass.png")
-    grass_img = pygame.transform.scale(grass_img, (consts.grass_size, consts.grass_size))
+    grass_img = pygame.transform.scale(grass_img, (consts.GRASS_SIZE, consts.GRASS_SIZE))
     return grass_img
 
 def draw_random_grass():
     for i in range(20):
-        temp_grass = game_field.random_x_y()[i]
+        temp_grass = game_field.random_x_y_for_gras()[i]
         screen.blit(create_grass(), temp_grass)
 
 # ----------------------------
 
 
-# -----------boom-----------------
+# -----------mine-----------------
 
-def create_boom():
-    boom_img = pygame.image.load("img/mine.png")
-    grass_img = pygame.transform.scale(boom_img,(consts.MINE_ROWS * consts.CELL_SIZE, consts.MINE_COLS * consts.CELL_SIZE))
+def create_mine():
+    mine_img = pygame.image.load("img/mine.png")
+    grass_img = pygame.transform.scale(mine_img,(consts.MINE_ROWS * consts.CELL_SIZE, consts.MINE_COLS * consts.CELL_SIZE))
     return grass_img
 
-def draw_boom_by_x_y():
-    count = 0
-    for i in range(20):
-        temp_boom = game_field.boom_list()[i]
-        screen.blit(create_boom(), temp_boom)
+def draw_mine_by_x_y():
+    mine_lst = game_field.add_mine_to_grid()
+    for i in range(consts.MINES_COUNT):
+        temp_mine = mine_lst[i]
+        refactor_mine = (temp_mine[1] * consts.CELL_SIZE, temp_mine[0] * consts.CELL_SIZE)
+        screen.blit(create_mine(), refactor_mine)
 
 # ----------------------------
 def create_flag():
@@ -88,11 +89,9 @@ def draw_grid(x,y):
             pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
 
 
-
-
-def create_display(x,y):
-    create_soldier(x, y)
+def create_display():
+    create_soldier(0, 0)
     draw_random_grass()
-    draw_boom_by_x_y()
+    draw_mine_by_x_y()
     create_flag()
     pygame.display.update()
