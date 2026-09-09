@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="change name to draw xray">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consts.py" beforeDir="false" afterPath="$PROJECT_DIR$/consts.py" afterDir="false" />
+    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="add capion and title text">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen.py" afterDir="false" />
     </list>
@@ -68,7 +66,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.game_field (1).executor": "Run",
     "Python.game_field.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.screen (1).executor": "Run",
     "Python.‪​game_field.executor": "Run",
     "Python.‪​screen.executor": "Run",
@@ -233,9 +231,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.game_field (1)" />
         <item itemvalue="Python.screen (1)" />
         <item itemvalue="Python.game_field" />
-        <item itemvalue="Python.game_field (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +380,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1788936835659</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL‎-00017" summary="add capion and title text">
+      <option name="closed" value="true" />
+      <created>1788938151934</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL‎-00017" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1788938151934</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +404,7 @@
     <MESSAGE value="somthing fuckt up" />
     <MESSAGE value="fix draw grid" />
     <MESSAGE value="change name to draw xray" />
-    <option name="LAST_COMMIT_MESSAGE" value="change name to draw xray" />
+    <MESSAGE value="add capion and title text" />
+    <option name="LAST_COMMIT_MESSAGE" value="add capion and title text" />
   </component>
 </project>
