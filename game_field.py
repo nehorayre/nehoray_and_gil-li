@@ -6,7 +6,7 @@ def board():
         for col in range(consts.BOARD_COLS):
             grid_game.append(consts.CELL_STATE[0])
     return grid_game
-
+print(board())
 
 gras_list = []
 def random_x_y():
@@ -18,5 +18,3 @@ def random_x_y():
             y = random.randint(0, consts.WINDOW_HEIGHT - 40)
         gras_list.append((x,y))
     return gras_list
-
-
