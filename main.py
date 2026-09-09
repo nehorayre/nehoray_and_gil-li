@@ -10,7 +10,8 @@ state = {
 
 
 def main():
-    screen.create_display()
+    screen.draw_grid(0,0)
+    screen.draw_xray()
 
 if __name__ == "__main__":
     while True:
