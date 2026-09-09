@@ -40,19 +40,21 @@ def draw_random_grass():
 # ----------------------------
 
 
-# -----------boom-----------------
+# -----------mine-----------------
 
-def create_boom():
-    boom_img = pygame.image.load("img/mine.png")
-    grass_img = pygame.transform.scale(boom_img,(consts.MINE_ROWS * consts.CELL_SIZE, consts.MINE_COLS * consts.CELL_SIZE))
+def create_mine():
+    mine_img = pygame.image.load("img/mine.png")
+    grass_img = pygame.transform.scale(mine_img,(consts.MINE_ROWS * consts.CELL_SIZE, consts.MINE_COLS * consts.CELL_SIZE))
     return grass_img
 
-def draw_boom_by_x_y():
-    count = 0
-    boom_lst = game_field.add_boom_grid()
-    for i in range(20):
-        temp_boom = boom_lst[i]
-        screen.blit(create_boom(), temp_boom)
+def draw_mine_by_x_y():
+    mine_lst = game_field.add_mine_to_grid()
+    for i in range(consts.MINES_COUNT):
+        temp_mine = mine_lst[i]
+        refactor_mine = (temp_mine[1] * consts.CELL_SIZE, temp_mine[0] * consts.CELL_SIZE)
+        print(refactor_mine)
+        screen.blit(create_mine(), refactor_mine)
+    print("----------------")
 
 # ----------------------------
 def create_flag():
@@ -92,6 +94,6 @@ def draw_grid(x,y):
 def create_display():
     create_soldier(0, 0)
     draw_random_grass()
-    draw_boom_by_x_y()
+    draw_mine_by_x_y()
     create_flag()
     pygame.display.update()
