@@ -10,6 +10,7 @@ state = {
 
 
 def main():
+    # screen.draw_grid(0,0)
     screen.create_display()
 
 if __name__ == "__main__":

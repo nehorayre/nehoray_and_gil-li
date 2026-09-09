@@ -81,17 +81,20 @@ def draw_message(message, font_size, color, location):
 # -------------draw---------------
 
 def draw_grid(x,y):
-    create_soldier_night(x,y)
-    blockSize = 20 #Set the size of the grid block
-    for x in range(0, consts.WINDOW_WIDTH, blockSize):
-        for y in range(0, consts.WINDOW_HEIGHT, blockSize):
-            rect = pygame.Rect(x, y, blockSize, blockSize)
-            pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
 
+
+    blockSize = 20 #Set the size of the grid block
+    for i in range(0, consts.WINDOW_WIDTH, blockSize):
+        for j in range(0, consts.WINDOW_HEIGHT, blockSize):
+            rect = pygame.Rect(i, j, blockSize, blockSize)
+            pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
+    draw_mine_by_x_y()
+    create_soldier_night(x, y)
+    pygame.display.update()
 
 def create_display():
+    screen.fill(consts.BACKGROUND_COLOR)
     create_soldier(0, 0)
     draw_random_grass()
-    draw_mine_by_x_y()
     create_flag()
     pygame.display.update()
