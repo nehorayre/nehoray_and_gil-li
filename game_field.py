@@ -52,6 +52,10 @@ def random_x_y_for_gras():
         gras_list.append((x, y))
     return gras_list
 
-
 grid = board()
 get_flag_pos()
+
+def get_board():
+    grid = board()
+    get_flag_pos()
+    return grid

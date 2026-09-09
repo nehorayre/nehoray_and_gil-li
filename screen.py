@@ -84,6 +84,7 @@ def draw_message(message, font_size, color, location):
 
 def draw_grid_xray(x, y):
     blockSize = 20 #Set the size of the grid block
+    screen.fill("#000000")
     for i in range(0, consts.WINDOW_WIDTH, blockSize):
         for j in range(0, consts.WINDOW_HEIGHT, blockSize):
             rect = pygame.Rect(i, j, blockSize, blockSize)

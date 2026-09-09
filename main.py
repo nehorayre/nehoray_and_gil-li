@@ -3,7 +3,7 @@ import screen
 import pygame
 import soldier
 import time
-
+import game_field
 state = {
     "is_window_open": True,
     "state": consts.RUNNING_STATE,
@@ -47,18 +47,21 @@ def handle_user_events():
                 state["visual_state"] = consts.X_RAY_VISION
                 state["soldier_direction"] = consts.NOT_MOVING
                 state["x_ray_time"] = time.time() - state["x_ray_time"]
+                time.sleep(3)
 
 def main():
     pygame.init()
-
+    screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
+    grid = game_field.get_board()
     while True:
         screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
-        if state["visual_state"] == consts.X_RAY_VISION:
-            if  time.time() - state["x_ray_time"] > 3:
-                screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
-                state["visual_state"] = consts.NORMAL_VISION
-
         handle_user_events()
+
+        if soldier.is_touching_boom():
+            print("LOOSER")
+            # state["state"] = consts.LOSING_STATE
+            # break
+
 
 if __name__ == "__main__":
     main()

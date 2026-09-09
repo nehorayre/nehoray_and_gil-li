@@ -20,9 +20,11 @@ soldier_legs = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
 soldier_body = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
 soldier_full_body = soldier_body + soldier_legs
 
-def is_touching_boom(boom_pos):
+def is_touching_boom():
+    mine_lst = game_field.add_mine_to_grid()
+
     for leg in range(len(soldier_legs)):
-        if soldier_legs[leg] in boom_pos:
+        if soldier_legs[leg] in mine_lst:
             return True
     return False
 
