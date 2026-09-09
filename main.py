@@ -57,10 +57,11 @@ def main():
         screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
         handle_user_events()
 
+
         if soldier.is_touching_boom():
             print("LOOSER")
             # state["state"] = consts.LOSING_STATE
-            # break
+            break
 
 
 if __name__ == "__main__":
