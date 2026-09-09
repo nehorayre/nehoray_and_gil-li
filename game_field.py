@@ -14,8 +14,8 @@ def board():
 
 def get_flag_pos():
     flag_pos = []
-    for row in range(3):
-        for col in range(4):
+    for row in range(consts.FLAG_ROWS):
+        for col in range(consts.FLAG_COLS):
             flag_pos.append((consts.flag_row + row, consts.flag_col + col))
             grid[consts.flag_row + row][consts.flag_col + col] = consts.CELL_STATE[2]
     return flag_pos
@@ -23,6 +23,8 @@ def get_flag_pos():
 
 mine_lst = []
 def add_mine_to_grid():
+    if len(mine_lst) == 20:
+        return mine_lst
     for i in range(20):
         row = random.randint(0, consts.BOARD_ROWS - 1)
         col = random.randint(0, consts.BOARD_COLS - 3 - 1)

@@ -43,24 +43,30 @@ def handle_user_events():
                 state["soldier_direction"] = consts.LEFT
 
             elif event.key == pygame.K_RETURN:
-                screen.draw_grid_xray(soldier.get_pos()[0], soldier.get_pos()[1])
+                screen.draw_grid_xray(soldier.get_pos()[0]  * consts.CELL_SIZE, soldier.get_pos()[1] * consts.CELL_SIZE)
                 state["visual_state"] = consts.X_RAY_VISION
                 state["soldier_direction"] = consts.NOT_MOVING
                 state["x_ray_time"] = time.time() - state["x_ray_time"]
-                time.sleep(3)
+                time.sleep(consts.SCREEN_FREEEZ)
 
 def main():
+    exit_loop = True
     pygame.init()
     screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
     grid = game_field.get_board()
-    while True:
+    while exit_loop:
         screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
         handle_user_events()
 
+        if soldier.is_touching_flag():
+            screen.draw_win_message()
+            time.sleep(consts.SCREEN_FREEEZ)
+            exit_loop = False
+
         if soldier.is_touching_boom():
-            print("LOOSER")
-            # state["state"] = consts.LOSING_STATE
-            # break
+            screen.draw_lose_message()
+            time.sleep(consts.SCREEN_FREEEZ)
+            exit_loop = False
 
 
 if __name__ == "__main__":

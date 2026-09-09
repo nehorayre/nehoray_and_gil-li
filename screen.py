@@ -24,6 +24,7 @@ def create_soldier(img ,x,y):
     soldier_img = pygame.transform.scale(soldier_img,
                     (consts.SOLDIER_ROWS * consts.CELL_SIZE,
                      consts.SOLDIER_ROWS * consts.CELL_SIZE))
+
     screen.blit(soldier_img, (x, y))
     return soldier_img
 
@@ -69,10 +70,13 @@ def create_flag():
 def draw_lose_message():
     draw_message(consts.LOSE_MESSAGE, consts.LOSE_FONT_SIZE,
                  consts.LOSE_COLOR, consts.LOSE_LOCATION)
+    pygame.display.update()
 
 def draw_win_message():
     draw_message(consts.WIN_MESSAGE, consts.WIN_FONT_SIZE,
                  consts.WIN_COLOR, consts.WIN_LOCATION)
+    pygame.display.update()
+
 
 def draw_message(message, font_size, color, location):
     font = pygame.font.SysFont(consts.FONT_NAME, font_size)
@@ -96,8 +100,8 @@ def draw_grid_xray(x, y):
 
 def draw_grid_normal(x, y):
     screen.fill(consts.BACKGROUND_COLOR)
-    create_soldier("img/soldier.png",x * consts.CELL_SIZE, y * consts.CELL_SIZE)
     draw_random_grass()
     create_flag()
+    create_soldier("img/soldier.png",x * consts.CELL_SIZE, y * consts.CELL_SIZE)
     write()
     pygame.display.update()
