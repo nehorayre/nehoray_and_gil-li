@@ -8,7 +8,7 @@ state = {
     "is_window_open": True,
     "state": consts.RUNNING_STATE,
     "visual_state": consts.NORMAL_VISION,
-    "x_ray_time" : time.time,
+    "x_ray_time" : time.time(),
     "soldier_direction": consts.NOT_MOVING
 }
 
@@ -42,11 +42,11 @@ def handle_user_events():
                 screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
                 state["soldier_direction"] = consts.LEFT
 
-            elif event.type == pygame.K_RETURN:
-                screen.draw_xray()
+            elif event.key == pygame.K_RETURN:
+                screen.draw_grid_xray(soldier.get_pos()[0], soldier.get_pos()[1])
                 state["visual_state"] = consts.X_RAY_VISION
                 state["soldier_direction"] = consts.NOT_MOVING
-                state["x_ray_time"] = Time.time
+                state["x_ray_time"] = time.time() - state["x_ray_time"]
 
 def main():
     pygame.init()
@@ -54,8 +54,9 @@ def main():
     while True:
         screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
         if state["visual_state"] == consts.X_RAY_VISION:
-            if state["x_ray_time"] >= 3:
+            if  time.time() - state["x_ray_time"] > 3:
                 screen.draw_grid_normal(soldier.get_pos()[0], soldier.get_pos()[1])
+                state["visual_state"] = consts.NORMAL_VISION
 
         handle_user_events()
 
