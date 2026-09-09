@@ -38,13 +38,6 @@ def add_mine_to_grid():
     return mine_lst
 
 
-def random_x_y():
-    lst = []
-    for i in range(20):
-        lst = [(random.randint(0, consts.WINDOW_WIDTH - 40), random.randint(0, consts.WINDOW_HEIGHT - 40))]
-    return lst
-
-
 gras_list = []
 
 

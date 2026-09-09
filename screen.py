@@ -92,7 +92,7 @@ def draw_grid(x,y):
     create_soldier_night(x, y)
     pygame.display.update()
 
-def create_display():
+def draw_xray():
     screen.fill(consts.BACKGROUND_COLOR)
     create_soldier(0, 0)
     draw_random_grass()
