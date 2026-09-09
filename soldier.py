@@ -36,30 +36,48 @@ def is_touching_flag():
             return True
     return False
 
-def is_inside_border():
+def is_inside_border(up, down, left, right):
+    global soldier_full_body
     for body in range(len(soldier_full_body)):
-        if soldier_full_body[body][1] < 0 or soldier_full_body[body][1] > consts.BOARD_ROWS:
-            if soldier_full_body[body][0] < 0 or soldier_full_body[body][0] > consts.BOARD_COLS:
+        if soldier_full_body[body][0] < 0 or soldier_full_body[body][0] > consts.BOARD_ROWS:
+            if soldier_full_body[body][1] < 0 or soldier_full_body[body][1] > consts.BOARD_COLS:
                 return False
     return True
 
+def is_inside_border_left_up(is_left):
+    global soldier_body, soldier_legs
+    if soldier["left_up_x"] - 1 <= 0 and not is_left:
+        return False
+    if soldier["left_up_y"] - 1 <= 0 and is_left:
+        return False
+    return True
+
+def is_inside_border_right_down(is_right):
+    global soldier_body, soldier_legs
+    if soldier["left_up_x"] + 1 + 1 <= 0 and is_right:
+        return False
+    if soldier["left_up_y"] + 3 + 1 <= 0 and not is_right:
+        return False
+    return True
+
+
 def move_up():
-    if is_inside_border():
+    if soldier["left_up_y"] - 1 >= 0:
         soldier["left_up_y"] -= 1
         update_poses()
 
 def move_down():
-    if is_inside_border():
+    if soldier["left_up_y"] + 4 + 1 <= consts.BOARD_ROWS:
         soldier["left_up_y"] += 1
         update_poses()
 
 def move_left():
-    if is_inside_border():
+    if soldier["left_up_x"]  >= 0:
         soldier["left_up_x"] -= 1
         update_poses()
 
 def move_right():
-    if is_inside_border():
+    if soldier["left_up_x"] + 4 <= consts.BOARD_COLS:
         soldier["left_up_x"] += 1
         update_poses()
 
