@@ -10,7 +10,6 @@ state = {
 
 
 def main():
-    screen.draw_grid(0,0)
     screen.draw_xray()
 
 if __name__ == "__main__":

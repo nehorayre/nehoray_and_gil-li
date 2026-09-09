@@ -6,8 +6,17 @@ import game_field
 
 
 pygame.init()
+pygame.display.set_caption('The flag')
 
 screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
+
+
+def write():
+    font = pygame.font.SysFont("Ariel", 24)
+    img = font.render('Welcome to The Flag game.\n Have Fun!', True, (255, 255, 255))
+    screen.blit(img, (90, 20))
+
+
 
 # -------------soldier-------------------------
 def create_soldier(x,y):
@@ -97,4 +106,5 @@ def draw_xray():
     create_soldier(0, 0)
     draw_random_grass()
     create_flag()
+    write()
     pygame.display.update()
