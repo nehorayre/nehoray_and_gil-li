@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="somthing fuckt up">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nehoray_and_gil-li.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/explotion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/guard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/injury.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/snake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/soldier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/soldier_night.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/teleport.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consts.py" beforeDir="false" afterPath="$PROJECT_DIR$/consts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_field.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/‪​screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "devNehoray",
     "git.auto.fetch.suggestion.counter": "1",
     "last_opened_file_path": "C:/Users/jbt/PycharmProjects/nehoray_gil-li/nehoray_and_gil-li",
     "node.js.detected.package.jshint": "true",
