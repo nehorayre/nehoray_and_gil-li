@@ -35,30 +35,30 @@ def is_inside_border():
                 return False
     return True
 
-def move_up(soldier_body_change, soldier_legs_change):
+def move_up():
     if is_inside_border():
         soldier["left_up_y"] += 1
-        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
-        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+        update_poses()
 
-def move_down(soldier_body_change, soldier_legs_change):
+def move_down():
     if is_inside_border():
         soldier["left_up_y"] -= 1
-        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
-        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+        update_poses()
 
-def move_left(soldier_body_change, soldier_legs_change):
+def move_left():
     if is_inside_border():
         soldier["left_up_x"] -= 1
-        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
-        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+        update_poses()
 
-def move_right(soldier_body_change, soldier_legs_change):
+def move_right():
     if is_inside_border():
         soldier["left_up_x"] += 1
-        soldier_legs_change = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
-        soldier_body_change = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+        update_poses()
 
+def update_poses():
+    global soldier, soldier_body, soldier_legs
+    soldier_legs = get_soldier_leg_pos(soldier["left_up_x"],soldier["left_up_y"])
+    soldier_body = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
 
 soldier = init_soldier()
 soldier_legs = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])

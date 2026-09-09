@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="" />
+    <list default="true" id="ac88303e-cd81-4d1a-9e06-b1eaf9fc6964" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/‪​soldier.py" beforeDir="false" afterPath="$PROJECT_DIR$/‪​soldier.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -353,7 +355,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1788934684503</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL‎-00014" summary="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;__pycache__/consts.cpython-314.pyc&#10;#&#9;__pycache__/game_field.cpython-314.pyc&#10;#&#9;__pycache__/screen.cpython-314.pyc">
+      <option name="closed" value="true" />
+      <created>1788936718309</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL‎-00014" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1788936718309</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
