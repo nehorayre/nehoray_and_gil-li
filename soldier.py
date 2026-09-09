@@ -1,10 +1,10 @@
 import consts
 import game_field
 
-def init_soldier():
+def init_soldier(x = 0, y = 0):
     return {
-        "left_up_x" : 0,
-        "left_up_y" : 0,
+        "left_up_x" : x,
+        "left_up_y" : y,
     }
 
 def get_soldier_leg_pos(left_up_x, left_up_y):
@@ -14,6 +14,11 @@ def get_soldier_body(left_up_x, left_up_y):
     return [(left_up_x, left_up_y), (left_up_x, left_up_y + 1),
             (left_up_x + 1, left_up_y + 2), (left_up_x + 1, left_up_y),
             (left_up_x + 1, left_up_y + 1), (left_up_x + 1, left_up_y + 2)]
+
+soldier = init_soldier()
+soldier_legs = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
+soldier_body = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
+soldier_full_body = soldier_body + soldier_legs
 
 def is_touching_boom(boom_pos):
     for leg in range(len(soldier_legs)):
@@ -37,12 +42,12 @@ def is_inside_border():
 
 def move_up():
     if is_inside_border():
-        soldier["left_up_y"] += 1
+        soldier["left_up_y"] -= 1
         update_poses()
 
 def move_down():
     if is_inside_border():
-        soldier["left_up_y"] -= 1
+        soldier["left_up_y"] += 1
         update_poses()
 
 def move_left():
@@ -55,12 +60,12 @@ def move_right():
         soldier["left_up_x"] += 1
         update_poses()
 
+def get_pos():
+    return (soldier["left_up_x"], soldier["left_up_y"])
+
 def update_poses():
     global soldier, soldier_body, soldier_legs
+
     soldier_legs = get_soldier_leg_pos(soldier["left_up_x"],soldier["left_up_y"])
     soldier_body = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
 
-soldier = init_soldier()
-soldier_legs = get_soldier_leg_pos(soldier["left_up_x"], soldier["left_up_y"])
-soldier_body = get_soldier_body(soldier["left_up_x"], soldier["left_up_y"])
-soldier_full_body = soldier_body + soldier_legs

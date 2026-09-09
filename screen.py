@@ -82,7 +82,7 @@ def draw_message(message, font_size, color, location):
 
 # -------------draw---------------f
 
-def draw_grid(x,y):
+def draw_grid_xray(x, y):
     blockSize = 20 #Set the size of the grid block
     for i in range(0, consts.WINDOW_WIDTH, blockSize):
         for j in range(0, consts.WINDOW_HEIGHT, blockSize):
@@ -93,9 +93,9 @@ def draw_grid(x,y):
     create_soldier("img/soldier_night.png",x, y)
     pygame.display.update()
 
-def draw_xray():
+def draw_grid_normal(x, y):
     screen.fill(consts.BACKGROUND_COLOR)
-    create_soldier("img/soldier.png",0, 0)
+    create_soldier("img/soldier.png",x * consts.CELL_SIZE, y * consts.CELL_SIZE)
     draw_random_grass()
     create_flag()
     write()
