@@ -6,25 +6,27 @@ import game_field
 
 
 pygame.init()
+pygame.display.set_caption('The flag')
 
 screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 
+
+def write():
+    font = pygame.font.SysFont("Ariel", 24)
+    img = font.render('Welcome to The Flag game.\n Have Fun!', True, (255, 255, 255))
+    screen.blit(img, (90, 20))
+
+
+
 # -------------soldier-------------------------
-def create_soldier(x,y):
-    soldier_img = pygame.image.load("img/soldier.png")
+def create_soldier(img ,x,y):
+    soldier_img = pygame.image.load(img)
     soldier_img = pygame.transform.scale(soldier_img,
                     (consts.SOLDIER_ROWS * consts.CELL_SIZE,
                      consts.SOLDIER_ROWS * consts.CELL_SIZE))
     screen.blit(soldier_img, (x, y))
     return soldier_img
 
-def create_soldier_night(x,y):
-    soldier_img = pygame.image.load("img/soldier.png")
-    soldier_img = pygame.transform.scale(soldier_img,
-                    (consts.SOLDIER_ROWS * consts.CELL_SIZE,
-                     consts.SOLDIER_ROWS * consts.CELL_SIZE))
-    screen.blit(soldier_img, (x, y))
-    return soldier_img
 
  # ----------grass-------------
 def create_grass():
@@ -78,23 +80,23 @@ def draw_message(message, font_size, color, location):
     screen.blit(text_img, location)
 
 
-# -------------draw---------------
+# -------------draw---------------f
 
 def draw_grid(x,y):
-
-
     blockSize = 20 #Set the size of the grid block
     for i in range(0, consts.WINDOW_WIDTH, blockSize):
         for j in range(0, consts.WINDOW_HEIGHT, blockSize):
             rect = pygame.Rect(i, j, blockSize, blockSize)
             pygame.draw.rect(screen, consts.BACKGROUND_COLOR, rect, 1)
+    create_flag()
     draw_mine_by_x_y()
-    create_soldier_night(x, y)
+    create_soldier("img/soldier_night.png",x, y)
     pygame.display.update()
 
 def draw_xray():
     screen.fill(consts.BACKGROUND_COLOR)
-    create_soldier(0, 0)
+    create_soldier("img/soldier.png",0, 0)
     draw_random_grass()
     create_flag()
+    write()
     pygame.display.update()
